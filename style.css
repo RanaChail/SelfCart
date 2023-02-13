@@ -1,0 +1,20 @@
+#brandLogofont{
+    font-family: 'Pacifico', cursive;
+    color: magenta;
+}
+.nav-link{
+    color: darkgray;
+}
+#navbartext{
+    color: darkgray;
+}
+#categoryfont{
+    color: white;
+    font-weight: bolder;
+}
+#helpsupportfont{
+    color: white;
+    font-weight: bolder;
+}
+
+/* This is for product checkout button  */

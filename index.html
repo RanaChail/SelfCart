@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SelfCart-Here everything which you want!</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- NavigationBar -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#" id="brandLogofont">
+        <img src="/Images/BrandLogo.png" alt="Logo" width="30" height="30" class="d-inline-block align-text-top">
+        Self-Cart
+      </a>
+      <form class="d-flex mt-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search Your Product" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+        aria-controls="offcanvasDarkNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+        aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">All</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+            aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li>
+              <button class="btn btn-outline-success mx-3" data-bs-toggle="modal"
+                data-bs-target="#loginModal">Login</button>
+              <button class="btn btn-outline-danger mx-3" data-bs-toggle="modal"
+                data-bs-target="#signupModal">SignUp</button>
+              <button type="button" class="btn btn-outline-danger">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart3"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z">
+                  </path>
+                </svg>
+                Cart
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Your Orders</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Your Payment Methods</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Your Address</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Transaction History</a>
+            </li>
+            <hr>
+            <li>
+              <a class="nav-link" href="/subcriptions.html" id="subscriptions"><b>Subscriptions</b></a>
+            </li>
+            <hr>
+            <li>
+              <a class="nav-link" href="#" id="categoryfont"><b>Product Category</b></a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Electronics</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Fashion</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Shoes</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Grocery</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Books</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">Medicines</a>
+            </li>
+            <hr>
+            <li>
+              <a class="nav-link" href="#" id="helpsupportfont"><b>Help & Support</b></a>
+            </li>
+            <li>
+              <a class="nav-link" href="/contactus.html">Contact Us</a>
+            </li>
+            <li>
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="loginModalLabel">Log in</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Remind Me Later</label>
+            </div>
+            <button type="submit" class="btn btn-success">Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SignUp Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="signupModalLabel">Create an account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword2" class="form-label">Confirm Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">I agree to terms and conditions</label>
+            </div>
+            <button type="submit" class="btn btn-success">Submit</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Main Container -->
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Nice! </strong>Thanks for shopping here.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade my-2">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/Images/photo1.jpg" class="d-block w-100" alt="photo1">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>iPhone 14 Pro Max</h5>
+          <p>The iPhone 14 Pro and Pro Max feature a Super Retina XDR OLED display with a typical maximum brightness of
+            1,000 nits.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/Images/photo2.jpeg" class="d-block w-100" alt="photo2">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Mac Mini</h5>
+          <p>The Mac mini is a small desktop computer made by Apple.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="/Images/photo3.jpg" class="d-block w-100" alt="photo3">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Boat Buds 2</h5>
+          <p> Wireless Earbuds with upto 60 Hours Playback, 13mm Drivers and IWP Technology, 650mah C type Charging
+            Case.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <br>
+  <br>
+  <!-- Products names part -->
+  <div class="row row-cols-1 row-cols-md-6 g-4">
+    <div class="col">
+      <div class="card">
+        <img src="/Images/product3.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Electronics</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.
+          </p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/Images/product6.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Fashion</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/Images/product4.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Shoes</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content.
+          </p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="Images/product5.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Grocery</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/Images/product1.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Books</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content. This content is a little bit longer.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card">
+        <img src="/Images/product2.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Medicines</h5>
+          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional
+            content.</p>
+          <div class="d-grid gap-2">
+            <button class="btn btn-warning" type="button">CheckOut</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Footer  -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-4 d-flex align-items-center">
+      <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+        <img class="bi" width="30" height="30" src="/Images/BrandLogo.png">
+        <use xlink:href="#bootstrap"></use>
+        </img>
+      </a>
+      <span class="mb-3 mb-md-0 text-muted">©2022-2023 Self-Cart, Inc</span>
+    </div>
+
+    <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+      <li class="ms-3"><a class="text-muted" href="#"><img class="bi" width="24" height="24" src="/Images/png1.png">
+          <use xlink:href="#facebook"></use>
+          </img>
+        </a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><img class="bi" width="24" height="24" src="/Images/png2.png">
+          <use xlink:href="#instagram"></use>
+          </img>
+        </a></li>
+      <li class="ms-3"><a class="text-muted" href="#"><img class="bi" width="24" height="24" src="/Images/png3.png">
+          <use xlink:href="#twitter"></use>
+          </img>
+        </a></li>
+    </ul>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
